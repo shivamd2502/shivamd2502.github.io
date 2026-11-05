@@ -20,6 +20,22 @@ D:\shivam_portfolio
 Double-click / run `start_website.ps1`. It opens http://localhost:5173 with live reload.
 Edit `site\src\data.ts` and the page updates instantly.
 
+## Live site & redeploying
+
+The site is published by GitHub Pages at **https://shivamd2502.github.io**:
+- repo `shivamd2502/shivamd2502.github.io`;
+- branch `main` holds this source;
+- branch `gh-pages` holds the built site.
+
+After editing anything, run:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File D:\shivam_portfolio\deploy.ps1
+```
+
+It builds the site and publishes it. Allow about a minute before the live site updates.
+`images\` and `local_only\` stay on this PC and are never uploaded; the old third-party intro GIF is in `local_only\`.
+
 ## Build for hosting
 
 ```powershell
