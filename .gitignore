@@ -1,0 +1,10 @@
+# tools and build output
+.tools/
+site/node_modules/
+site/dist/
+*.log
+
+# local-only material (original image files, third-party intro GIF, backups)
+/images/
+/local_only/
+site/*.tsbuildinfo
