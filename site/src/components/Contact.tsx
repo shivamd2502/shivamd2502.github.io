@@ -5,18 +5,15 @@ import { Reveal, Section } from "./ui";
 
 export default function Contact() {
   return (
-    <Section id="contact" eyebrow="07 · Contact" title="Let's build something">
+    <Section id="contact" eyebrow="07 · Contact">
       <Reveal>
         <div className="glass relative overflow-hidden rounded-3xl p-8 sm:p-12">
           <div className="orb pointer-events-none absolute -top-24 -right-24 size-72 rounded-full bg-violet-500/25" />
           <div className="orb pointer-events-none absolute -bottom-24 -left-24 size-72 rounded-full bg-cyan-500/20" style={{ animationDelay: "-4s" }} />
           <div className="relative">
             <h3 className="max-w-2xl text-2xl font-bold text-white sm:text-3xl">
-              Looking for someone who can take an AI or computer-vision idea from raw data to a measured result?
+              Research as a service: <span className="gradient-text">math, algorithms, AI.</span>
             </h3>
-            <p className="mt-4 max-w-xl text-slate-400">
-              I'm open to full-time roles, internships and research collaborations in applied AI, computer vision and remote sensing.
-            </p>
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <a href={profile.links.email} className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-cyan-400 to-violet-400 px-5 py-3 font-semibold text-ink transition hover:scale-[1.03]">
                 <Send className="size-4" /> Email me

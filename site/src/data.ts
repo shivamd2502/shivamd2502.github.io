@@ -5,10 +5,8 @@ const ghFile = (r: string, path: string) => `https://github.com/shivamd2502/${r}
 
 export const profile = {
   name: "Shivam Dapkekar",
-  roles: ["Applied AI", "AI Vision Research", "Multimodal AI · VLM & VLA", "Computer Vision Research"],
   keywords: ["Applied AI", "AI Vision Research", "Multimodal · VLM / VLA"],
   tagline: "I research and build AI that sees and understands: computer vision, vision-language models and multimodal learning, taken from idea to working system.",
-  location: "Pune, India",
   links: {
     email: "mailto:shivamdapkekar25@gmail.com",
     emailText: "shivamdapkekar25@gmail.com",
@@ -30,7 +28,6 @@ export const stats = [
   { value: "4", label: "IEEE papers" },
   { value: "6", label: "Open-source research projects" },
   { value: "2", label: "Research & industry internships" },
-  { value: "283 / 5,606", label: "Kaggle IMC 2025 rank" },
 ];
 
 export type Experience = {
@@ -136,7 +133,7 @@ export const projects: Project[] = [
       { label: "Methodology", href: ghFile("Land-Cover-CLIP-PEFT-Image-Search", "docs/METHODOLOGY.md"), kind: "docs" },
       { label: "Results", href: ghFile("Land-Cover-CLIP-PEFT-Image-Search", "docs/RESULTS.md"), kind: "docs" },
     ],
-    paperStatus: "IEEE OTCON 2026 · accepted, publication pending",
+    paperStatus: "Published · IEEE OTCON 2026",
     gallery: [
       { src: img("clip_confusion"), alt: "Fine-tuned model on the test split" },
     ],
@@ -363,8 +360,7 @@ export const publications: Publication[] = [
   {
     title: "Scalable Land Cover Classification using Parameter-Efficient Vision-Language Models",
     venue: "IEEE OTCON 2026",
-    status: "Accepted",
-    note: "To appear in IEEE Xplore",
+    status: "Published",
     code: gh("Land-Cover-CLIP-PEFT-Image-Search"),
   },
   {

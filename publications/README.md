@@ -4,7 +4,7 @@ Google Scholar: https://scholar.google.com/citations?user=zGBbdiYAAAAJ&hl=en
 
 | # | Title | Venue | Status | Code |
 |---|---|---|---|---|
-| 1 | Scalable Land Cover Classification using Parameter-Efficient Vision-Language Models | IEEE OTCON 2026 | Accepted, publication pending | [repo](https://github.com/shivamd2502/Land-Cover-CLIP-PEFT-Image-Search) |
+| 1 | Scalable Land Cover Classification using Parameter-Efficient Vision-Language Models | IEEE OTCON 2026 | Published | [repo](https://github.com/shivamd2502/Land-Cover-CLIP-PEFT-Image-Search) |
 | 2 | Hybrid Bayesian Network Fault Diagnosis using ML and Expert Systems | IEEE KALINGACONF 2026 | Accepted, publication pending | [repo](https://github.com/shivamd2502/Hybrid-Network-Fault-Diagnosis) |
 | 3 | Elastic Deep Autoencoder-Based Hybrid Intrusion Detection System for IoT Networks | IEEE OTCON 2025 | Published | [repo](https://github.com/shivamd2502/IoT-Intrusion-Detection-Elastic-Autoencoder) |
 | 4 | Automated X-ray Image Stitching for Enhanced Medical Diagnostics and Visualization | IEEE, 2025 | Published | [repo](https://github.com/shivamd2502/Automated-X-ray-Stitching) |

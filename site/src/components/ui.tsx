@@ -15,15 +15,15 @@ export function Reveal({ children, delay = 0, className = "" }: { children: Reac
   );
 }
 
-export function Section({ id, eyebrow, title, intro, children }: { id: string; eyebrow: string; title: string; intro?: string; children: ReactNode }) {
+export function Section({ id, eyebrow, title, intro, children }: { id: string; eyebrow: string; title?: string; intro?: string; children: ReactNode }) {
   return (
     <section id={id} className="relative mx-auto max-w-6xl scroll-mt-24 px-5 py-20 sm:px-8 md:py-28">
       <Reveal>
         <p className="font-mono text-sm tracking-widest text-accent uppercase">{eyebrow}</p>
-        <h2 className="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl">{title}</h2>
+        {title && <h2 className="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl">{title}</h2>}
         {intro && <p className="mt-4 max-w-2xl text-slate-400">{intro}</p>}
       </Reveal>
-      <div className="mt-12">{children}</div>
+      <div className={title ? "mt-12" : "mt-6"}>{children}</div>
     </section>
   );
 }
