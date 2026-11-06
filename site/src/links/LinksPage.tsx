@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { ArrowUpRight, Globe } from "lucide-react";
 import type { ComponentType } from "react";
-import { profile, projects, stats } from "../data";
+import { profile, projects } from "../data";
 import { GithubIcon, KaggleIcon, LinkedinIcon, MediumIcon, ScholarIcon, XIcon } from "../components/BrandIcons";
 
 // this page lives at /links/, so site assets and the portfolio are one level up
@@ -40,21 +40,6 @@ export default function LinksPage() {
           <h1 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
             <span className="gradient-text">{profile.name}</span>
           </h1>
-          <div className="mt-4 flex flex-wrap justify-center gap-2">
-            {profile.keywords.map((k) => (
-              <span key={k} className="rounded-full border border-accent/30 bg-gradient-to-r from-cyan-500/10 to-violet-500/10 px-3 py-1 text-xs font-medium text-white sm:text-sm">
-                {k}
-              </span>
-            ))}
-          </div>
-          <div className="mx-auto mt-6 grid max-w-md grid-cols-3 overflow-hidden rounded-2xl border border-line bg-white/[0.02]">
-            {stats.map((s, i) => (
-              <div key={s.label} className={`px-2 py-3 ${i > 0 ? "border-l border-line" : ""}`}>
-                <p className="text-xl font-bold text-white">{s.value}</p>
-                <p className="mt-0.5 text-[11px] leading-tight text-slate-500">{s.label}</p>
-              </div>
-            ))}
-          </div>
         </motion.div>
 
         {/* links */}
