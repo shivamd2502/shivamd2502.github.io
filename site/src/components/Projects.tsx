@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { ArrowUpRight, Award } from "lucide-react";
 import { projects, type Project } from "../data";
 import { GithubIcon } from "./BrandIcons";
@@ -6,13 +7,17 @@ import { Reveal, Section, Tag } from "./ui";
 function ProjectCard({ p, i, total }: { p: Project; i: number; total: number }) {
   // first card is wide; the last one too when it would otherwise sit alone in its row
   const featured = i === 0 || (i === total - 1 && (total - 1) % 2 === 1);
-  const contain = p.fit === "contain";
+  // cards show the project poster (AI artwork); the real result figure opens on the project page
+  const poster = p.poster ?? `${import.meta.env.BASE_URL}posters/${p.slug}.webp`;
+  const [usePoster, setUsePoster] = useState(true);
+  const contain = !usePoster && p.fit === "contain";
   const page = `#/projects/${p.slug}`;
   return (
     <Reveal delay={(i % 2) * 0.08} className={featured ? "md:col-span-2" : ""}>
       <article className={`glass group relative flex h-full flex-col overflow-hidden rounded-3xl transition duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-2xl hover:shadow-cyan-500/10 ${featured ? "md:flex-row" : ""}`}>
-        <a href={page} className={`relative block overflow-hidden bg-white ${featured ? "md:w-[55%]" : ""}`} aria-label={`Open ${p.title}`}>
-          <img src={p.image} alt={p.imageAlt} loading="lazy"
+        <a href={page} className={`relative block overflow-hidden ${contain ? "bg-white" : "bg-panel"} ${featured ? "md:w-[55%]" : ""}`} aria-label={`Open ${p.title}`}>
+          <img src={usePoster ? poster : p.image} alt={usePoster ? `${p.title}: illustration` : p.imageAlt} loading="lazy"
+            onError={() => setUsePoster(false)}
             className={`w-full transition duration-700 group-hover:scale-[1.04] ${contain ? "object-contain p-4" : "object-cover"} ${featured ? "h-64 md:h-full md:min-h-80" : "h-56"}`} />
           {!contain && <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-transparent" />}
           {p.venue && (

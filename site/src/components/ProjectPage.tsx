@@ -41,7 +41,7 @@ export default function ProjectPage({ p }: { p: Project }) {
   const [zoom, setZoom] = useState<{ src: string; alt: string } | null>(null);
   const idx = projects.findIndex((x) => x.slug === p.slug);
   const next = projects[(idx + 1) % projects.length];
-  const images = [{ src: p.image, alt: p.imageAlt }, ...(p.gallery ?? [])];
+  const images = p.gallery ?? [];
 
   useEffect(() => {
     document.title = `${p.title} · Shivam Dapkekar`;
@@ -80,6 +80,15 @@ export default function ProjectPage({ p }: { p: Project }) {
         <p className="max-w-3xl text-lg leading-relaxed text-slate-400">{p.summary}</p>
       </Block>
 
+      <Block title="Key result">
+        <button onClick={() => setZoom({ src: p.image, alt: p.imageAlt })} className="glass group block w-full overflow-hidden rounded-3xl text-left">
+          <div className={`flex items-center justify-center overflow-hidden ${p.fit === "contain" ? "bg-white p-4" : "bg-black/40"}`}>
+            <img src={p.image} alt={p.imageAlt} className="max-h-[32rem] w-full object-contain transition duration-500 group-hover:scale-[1.02]" />
+          </div>
+          <p className="p-4 text-sm text-slate-400">{p.imageAlt} · click to enlarge</p>
+        </button>
+      </Block>
+
       <Block title="Workflow">
         <ol className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {p.workflow.map((w, i) => (
@@ -105,7 +114,7 @@ export default function ProjectPage({ p }: { p: Project }) {
         </ul>
       </Block>
 
-      <Block title="Results & figures">
+      {images.length > 0 && <Block title="More figures">
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {images.map((im) => (
             <button key={im.src} onClick={() => setZoom(im)} className="glass group overflow-hidden rounded-2xl text-left">
@@ -116,7 +125,7 @@ export default function ProjectPage({ p }: { p: Project }) {
             </button>
           ))}
         </div>
-      </Block>
+      </Block>}
 
       <Block title="Research paper & documents">
         <div className="grid gap-4 md:grid-cols-2">

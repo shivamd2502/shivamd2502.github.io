@@ -12,7 +12,7 @@ export default function Contact() {
           <div className="orb pointer-events-none absolute -bottom-24 -left-24 size-72 rounded-full bg-cyan-500/20" style={{ animationDelay: "-4s" }} />
           <div className="relative">
             <h3 className="max-w-2xl text-2xl font-bold text-white sm:text-3xl">
-              Research as a service: <span className="gradient-text">math, algorithms, AI.</span>
+              Scientific research, <span className="gradient-text">delivered as a service.</span>
             </h3>
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <a href={profile.links.email} className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-cyan-400 to-violet-400 px-5 py-3 font-semibold text-ink transition hover:scale-[1.03]">
