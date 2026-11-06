@@ -1,65 +1,8 @@
-# Shivam Dapkekar: personal portfolio website
+# shivamd2502.github.io
 
-Built with **React 19 · TypeScript · Vite 8 · Tailwind CSS v4 · Motion** (Framer Motion) · lucide icons.
+Personal website of **Shivam Dapkekar**: Applied AI · AI Vision Research · Multimodal Learning (VLM / VLA).
 
-```
-D:\shivam_portfolio
-├── site\                 the website (source code)
-│   ├── src\data.ts       ALL text: profile, experience, projects, publications, extras, skills
-│   ├── src\components\   page sections (Hero, About, Experience, Projects, Publications, Extras, Skills, Contact)
-│   ├── public\images\    project images (WebP, made from the figures in each repo)
-│   ├── dist\             built website after "npm run build" (upload this folder to host it)
-│   └── scripts\screenshot.mjs   takes screenshots of the site for checking
-├── publications\         publication list + links (publications.json, README.md)
-├── .tools\               portable Node.js (no system install needed)
-└── start_website.ps1     one-click: starts the site at http://localhost:5173
-```
+- Portfolio: https://shivamd2502.github.io/
+- Links: https://shivamd2502.github.io/links/
 
-## Run it
-
-Double-click / run `start_website.ps1`. It opens http://localhost:5173 with live reload.
-Edit `site\src\data.ts` and the page updates instantly.
-
-## Live site & redeploying
-
-The site is published by GitHub Pages at **https://shivamd2502.github.io**:
-- repo `shivamd2502/shivamd2502.github.io`;
-- branch `main` holds this source;
-- branch `gh-pages` holds the built site.
-
-After editing anything, run:
-
-```powershell
-powershell -ExecutionPolicy Bypass -File D:\shivam_portfolio\deploy.ps1
-```
-
-It builds the site and publishes it. Allow about a minute before the live site updates.
-`images\` and `local_only\` stay on this PC and are never uploaded; the old third-party intro GIF is in `local_only\`.
-
-## Build for hosting
-
-```powershell
-$env:Path = "$(Get-Content D:\shivam_portfolio\.tools\NODE_DIR.txt);$env:Path"
-cd D:\shivam_portfolio\site
-npm run build          # output in site\dist (works from any folder or sub-path)
-```
-
-Free hosting options for `site\dist`: GitHub Pages (`shivamd2502.github.io`), Netlify or Vercel.
-
-## Project pages and posters
-
-Each project card opens its own page (`#/projects/<slug>`):
-- a wide poster (the problem, a key outcome and the project visual);
-- the GitHub repo and PDFs;
-- the workflow steps, "what we did", the figures, and the research paper and documents.
-
-To use AI-generated posters, follow `posters\PROMPTS.md` and save the images as
-`site\public\posters\<slug>.webp`. They replace the designed poster automatically.
-
-## Content rules used
-
-* Project cards show outcomes (speed, scale, design choices), not accuracy figures.
-* Interests: Applied AI, AI vision research, multimodal learning (VLM / VLA), computer vision research.
-* No web, data/Python or geospatial skill groups; no instrumentation coursework; no DC Motor project; no bus-suspension controller.
-* Accepted papers are labelled "Accepted · publication pending"; the ISRO paper is "In preparation".
-* Phone number is not published; email, LinkedIn, X, GitHub and Google Scholar are.
+The published site is served from the `gh-pages` branch.
